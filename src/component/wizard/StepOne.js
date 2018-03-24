@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import { getInfo } from '../../ducks/reducer';
 
 class StepOne extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
             name: '',
             address: '',
@@ -17,15 +17,16 @@ class StepOne extends Component {
         this.handleChange = this.handleChange.bind(this);
     }
 
-    componentDidUpdate(prevProps) {
-        // if (prevProps.price !== this.props.price) {
+    componentDidMount() {
+        // if (JSON.stringify(prevProps) !== JSON.stringify(this.props)) {
+        // if (prevProps !== this.props) {
             this.setState({ 
-                name: this.props.name,
+                name: this.props.name, // how is it not using obj name???? but works like a charm 
                 address: this.props.address,
                 city: this.props.city,
                 state: this.props.state,
                 zipcode: this.props.zipcode
-            })
+            });
         // }
     }
 
@@ -59,11 +60,11 @@ class StepOne extends Component {
 
 const mapPropsToState = (state) => {
     return {
-        name: state.name,
-        address: state.address,
-        city: state.city,
-        state: state.state,
-        zipcode: state.zipcode
+        name: state.info.name,
+        address: state.info.address,
+        city: state.info.city,
+        state: state.info.state,
+        zipcode: state.info.zipcode
     }
 }
 

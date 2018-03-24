@@ -7,18 +7,16 @@ class StepTwo extends Component {
     constructor() {
         super();
         this.state = {
-            img: '',
+            img: ''
         };
     
         this.handleChange = this.handleChange.bind(this);
     }
 
-    componentDidUpdate(prevProps) {
-      
-            this.setState = {
-                img: this.props.img
-            }
-        
+    componentDidMount() {
+        this.setState({
+            img: this.props.img
+        });
     }
 
     handleChange(e) {
@@ -27,12 +25,7 @@ class StepTwo extends Component {
         });
     }
 
-
-
     render() {
-        console.log(this.props.price)
-
-        console.log(this.props.img)
         return (
             <div>
                 Image URL
