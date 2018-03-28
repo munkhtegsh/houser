@@ -6,6 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './ducks/store';
+import 'normalize.css';
 
 ReactDOM.render(
 <HashRouter>

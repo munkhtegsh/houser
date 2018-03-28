@@ -1,0 +1,36 @@
+.dashboard {
+  margin: 0 auto;
+  width: 70%;
+  height: 90vh;
+  background-color: white;
+}
+
+.dashboard__nav {
+  display: flex;
+  width: 100%;
+  height: 5vh;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.padding {
+  width: 100%;
+  height: 5vh;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.dashboard__p {
+  font-size: 1.5em;
+}
+
+.dashboard__button {
+  background-color: $light-green;
+  border-radius: 2px;
+  padding: 0.3rem;
+}
+
+.dashboard__title {
+  margin: 0;
+}

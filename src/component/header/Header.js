@@ -2,8 +2,8 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <div>
-            Header
+        <div className='nav'>
+            <h2 className='nav__header main'>Header</h2>
         </div>
     )
 }

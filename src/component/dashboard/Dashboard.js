@@ -38,8 +38,12 @@ class Dashboard extends Component {
             )
         })
         return (
-            <div>
-                <Link to='/wizard/step1'><button>Add new Property</button></Link>
+            <div className='dashboard' >
+                <div className='dashboard__nav padding'>
+                    <p className='dashboard__p'>Dashboard</p>
+                    <Link to='/wizard/step1'><button className='dashboard__button'>Add New Property</button></Link>
+                </div>
+                <p className="padding dashboard__title">Home Listings</p>
                 { list }
             </div>
         )

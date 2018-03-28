@@ -38,21 +38,41 @@ class StepOne extends Component {
 
 
     render() {
-        console.log(this.props.info)
         return (
-            <div>
+            <div className='stepOne'>
                 
-                Name
+                <div className='stepOne__name'>
+                Property Name
+                <br/>
                 <input placeholder="name" type="text" name="name" value={this.state.name} onChange={this.handleChange}/>
-                Address
-                <input placeholder="address"  type="text" name="address" value={this.state.address} onChange={this.handleChange}/>
-                City
-                <input placeholder="city"  type="text" name="city" value={this.state.city} onChange={this.handleChange}/>
-                State            
-                <input placeholder="state"  type="text" name="state" value={this.state.state} onChange={this.handleChange}/>
-                Zipcode
-                <input placeholder="zipcode"  type="text" name="zipcode" value={this.state.zipcode} onChange={this.handleChange}/>
-                <Link to="/wizard/step2" onClick={() => this.props.getInfo(this.state)}><button>Next Step</button></Link>
+                </div>
+
+                <div className='stepOne__address'>
+                    Address 
+                    <br/>
+                    <input className='stepOne__long-input' placeholder="address"  type="text" name="address" value={this.state.address} onChange={this.handleChange}/>
+                </div>
+
+                <div className='stepOne__city'>
+                    <div>
+                        City
+                        <br/>
+                        <input placeholder="city"  type="text" name="city" value={this.state.city} onChange={this.handleChange}/>
+                    </div>
+                   
+                    <div>
+                        State
+                        <br/>  
+                        <input placeholder="state"  type="text" name="state" value={this.state.state} onChange={this.handleChange}/>
+                    </div>
+
+                    <div>
+                    Zipcode
+                        <br/>
+                        <input placeholder="zipcode"  type="text" name="zipcode" value={this.state.zipcode} onChange={this.handleChange}/>
+                    </div>
+                </div>
+                <Link to="/wizard/step2" onClick={() => this.props.getInfo(this.state)}><button className='stepOne__next'>Next Step</button></Link>
             </div>
         )
     }

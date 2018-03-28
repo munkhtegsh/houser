@@ -1,0 +1,25 @@
+.stepOne__name {
+  margin-bottom: 1rem;
+}
+
+.stepOne__address {
+  @extend .stepOne__name;
+}
+
+.stepOne__city {
+  position: relative;
+  display: flex;
+  @extend .stepOne__name;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.stepOne__long-input {
+  width: 90%;
+}
+
+.stepOne__next {
+  // margin: 30rem auto;
+  background-color: $light-green
+}
+

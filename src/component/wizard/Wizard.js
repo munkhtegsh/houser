@@ -14,12 +14,16 @@ class Wizard extends Component {
 
     render() {
         return (
-            <div>
-                <Route path='/wizard/step1' component={StepOne} />
-                <Route path='/wizard/step2' component={StepThwo} />
-                <Route path='/wizard/step3' component={StepThree} />
-
-                <Link to='/'><button onClick={() => this.props.getCancel()}>Cancel</button></Link>
+            <div className="wizard">
+                <div className='wizar__sub-nav'>
+                    <h3 className='wizard__p'>Add New Listing</h3>
+                    <Link to='/'><button onClick={() => this.props.getCancel()}>Cancel</button></Link>
+                </div>
+                <div className='wizard__input_container'>
+                    <Route path='/wizard/step1' component={StepOne} />
+                    <Route path='/wizard/step2' component={StepThwo} />
+                    <Route path='/wizard/step3' component={StepThree} />
+                </div>
             </div>
         )
     }
